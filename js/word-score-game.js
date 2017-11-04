@@ -160,25 +160,82 @@ function Swap(wordarray, i, j) {
 	wordarray[i] = wordarray[j];
 	wordarray[j] = temp;
 }
-var deep = 0;
-var loop = 0;
-var loopend = 0;
+
+var maxScore=-1;
+var word = "";
+
+function CheckTheWordWhenHasUnderline(wordarray, string, num) {
+	if (num == 1) {
+		for (var i = 0; i < string.length; i++){
+			if (string[i] == '_') {
+				//console.log(string);
+				for (var ii = 0; ii < 26; ii++){
+					string = string.split('');
+					string.splice(i, 1, String.fromCharCode(65+ii));
+					string=string.join('');
+					//console.log(string);
+					CheckTheWord(wordarray, string);
+				}
+			}
+		}
+	}
+	else {
+		for (var i = 0; i < string.length; i++){
+			if (string[i] == '_') {
+				for (var ii = 0; ii < 26; ii++){
+					string[i] = 'a' + ii;
+					CheckTheWordWhenHasUnderline(wordarray, string, num-1);
+				}
+			}
+		}
+	}
+}
+function CheckTheWord(wordarray,string) {
+	if (isThisAWord(string)) {
+		var s = 0;
+		for (var i = 0; i < wordarray.length; i++){
+			s += wordarray[i].pointsWhenLettersUsed;
+		}
+		if (s > maxScore) {
+			word = string;
+			maxScore = s;
+		}
+	}
+}
 function AllArrange(wordarray, left, right) {
 	if (left == right) {
 		var string = "";
+		var num = 0;
 		for (var i = 0; i < wordarray.length; i++){
 			string += wordarray[i].letter;
+			if (wordarray[i].letter == '_') {
+				num++;
+			}
 		}
-		console.log("排列："+string);
+		if (num > 0) {
+			CheckTheWordWhenHasUnderline(wordarray,string, num);
+			return;
+		}
+		CheckTheWord(wordarray, string);
 	}
 	else {
 		for (var i = left; i <= right; i++) {
 			if (!isExit(wordarray, left, i)) {
 				Swap(wordarray, left, i);
-				AllArrange(wordarray, left+1, right);
+				AllArrange(wordarray, left + 1, right);
+				
+				if (right >= 1 && left == 0) {
+					var arraystring = JSON.stringify(wordarray);
+					var newwordarray = JSON.parse(arraystring);
+					newwordarray.shift();
+					//console.log(right);
+					AllArrange(newwordarray, 0, right-1);
+				}
+
 				Swap(wordarray, left, i);
 			}
-		}  
+
+		}
 	}
 }
 function findWordToUse(){
@@ -186,8 +243,24 @@ function findWordToUse(){
 	//alert("Your code needs to go here");
 	var string = JSON.stringify(YOUR_HAND);
 	var wordarray = JSON.parse(string);
-	AllArrange(wordarray, 0, wordarray.length-1);
 
+	AllArrange(wordarray, 0, wordarray.length - 1);
+	
+	if (maxScore > -1) {
+		console.log("max=" + word);
+		if (haveLettersForWord(word)) {
+			successfullyAddedWord(word);
+		}
+		else {
+			alert("It is a bug!");
+		}
+	}
+	else {
+		alert("Maybe there is no words!");
+		retireHand();
+	}
+	maxScore=-1;
+	word = "";
 }
 function humanFindWordToUse(){
 	

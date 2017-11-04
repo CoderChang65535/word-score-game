@@ -1,104 +1,104 @@
 var BAG_OF_LETTERS = [
-		new Letter('_', 2, 0),
-		new Letter('_', 2, 0),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('A', 9, 1),
-		new Letter('B', 2, 3),
-		new Letter('B', 2, 3),
-		new Letter('C', 2, 3),
-		new Letter('C', 2, 3),
-		new Letter('D', 4, 2),
-		new Letter('D', 4, 2),
-		new Letter('D', 4, 2),
-		new Letter('D', 4, 2),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('E', 12, 1),
-		new Letter('F', 2, 4),
-		new Letter('F', 2, 4),
-		new Letter('G', 3, 2),
-		new Letter('G', 3, 2),
-		new Letter('G', 3, 2),
-		new Letter('H', 2, 4),
-		new Letter('H', 2, 4),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('I', 9, 1),
-		new Letter('J', 1, 8),
-		new Letter('K', 1, 5),
-		new Letter('L', 4, 1),
-		new Letter('L', 4, 1),
-		new Letter('L', 4, 1),
-		new Letter('L', 4, 1),
-		new Letter('M', 2, 3),
-		new Letter('M', 2, 3),
-		new Letter('N', 6, 1),
-		new Letter('N', 6, 1),
-		new Letter('N', 6, 1),
-		new Letter('N', 6, 1),
-		new Letter('N', 6, 1),
-		new Letter('N', 6, 1),
-		new Letter('O', 8, 1),
-		new Letter('O', 8, 1),
-		new Letter('O', 8, 1),
-		new Letter('O', 8, 1),
-		new Letter('O', 8, 1),
-		new Letter('O', 8, 1),
-		new Letter('O', 8, 1),
-		new Letter('O', 8, 1),
-		new Letter('P', 2, 3),
-		new Letter('P', 2, 3),
-		new Letter('Q', 1, 10),
-		new Letter('R', 6, 1),
-		new Letter('R', 6, 1),
-		new Letter('R', 6, 1),
-		new Letter('R', 6, 1),
-		new Letter('R', 6, 1),
-		new Letter('R', 6, 1),
-		new Letter('S', 4, 1),
-		new Letter('S', 4, 1),
-		new Letter('S', 4, 1),
-		new Letter('S', 4, 1),
-		new Letter('T', 6, 1),
-		new Letter('T', 6, 1),
-		new Letter('T', 6, 1),
-		new Letter('T', 6, 1),
-		new Letter('T', 6, 1),
-		new Letter('T', 6, 1),
-		new Letter('U', 4, 1),
-		new Letter('U', 4, 1),
-		new Letter('U', 4, 1),
-		new Letter('U', 4, 1),
-		new Letter('V', 2, 4),
-		new Letter('V', 2, 4),
-		new Letter('W', 2, 4),
-		new Letter('W', 2, 4),
-		new Letter('X', 1, 8),
-		new Letter('Y', 2, 4),
-		new Letter('Y', 2, 4),
-		new Letter('Z', 1, 10),
+	new Letter('_', 2, 0),
+	new Letter('_', 2, 0),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('A', 9, 1),
+	new Letter('B', 2, 3),
+	new Letter('B', 2, 3),
+	new Letter('C', 2, 3),
+	new Letter('C', 2, 3),
+	new Letter('D', 4, 2),
+	new Letter('D', 4, 2),
+	new Letter('D', 4, 2),
+	new Letter('D', 4, 2),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('E', 12, 1),
+	new Letter('F', 2, 4),
+	new Letter('F', 2, 4),
+	new Letter('G', 3, 2),
+	new Letter('G', 3, 2),
+	new Letter('G', 3, 2),
+	new Letter('H', 2, 4),
+	new Letter('H', 2, 4),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('I', 9, 1),
+	new Letter('J', 1, 8),
+	new Letter('K', 1, 5),
+	new Letter('L', 4, 1),
+	new Letter('L', 4, 1),
+	new Letter('L', 4, 1),
+	new Letter('L', 4, 1),
+	new Letter('M', 2, 3),
+	new Letter('M', 2, 3),
+	new Letter('N', 6, 1),
+	new Letter('N', 6, 1),
+	new Letter('N', 6, 1),
+	new Letter('N', 6, 1),
+	new Letter('N', 6, 1),
+	new Letter('N', 6, 1),
+	new Letter('O', 8, 1),
+	new Letter('O', 8, 1),
+	new Letter('O', 8, 1),
+	new Letter('O', 8, 1),
+	new Letter('O', 8, 1),
+	new Letter('O', 8, 1),
+	new Letter('O', 8, 1),
+	new Letter('O', 8, 1),
+	new Letter('P', 2, 3),
+	new Letter('P', 2, 3),
+	new Letter('Q', 1, 10),
+	new Letter('R', 6, 1),
+	new Letter('R', 6, 1),
+	new Letter('R', 6, 1),
+	new Letter('R', 6, 1),
+	new Letter('R', 6, 1),
+	new Letter('R', 6, 1),
+	new Letter('S', 4, 1),
+	new Letter('S', 4, 1),
+	new Letter('S', 4, 1),
+	new Letter('S', 4, 1),
+	new Letter('T', 6, 1),
+	new Letter('T', 6, 1),
+	new Letter('T', 6, 1),
+	new Letter('T', 6, 1),
+	new Letter('T', 6, 1),
+	new Letter('T', 6, 1),
+	new Letter('U', 4, 1),
+	new Letter('U', 4, 1),
+	new Letter('U', 4, 1),
+	new Letter('U', 4, 1),
+	new Letter('V', 2, 4),
+	new Letter('V', 2, 4),
+	new Letter('W', 2, 4),
+	new Letter('W', 2, 4),
+	new Letter('X', 1, 8),
+	new Letter('Y', 2, 4),
+	new Letter('Y', 2, 4),
+	new Letter('Z', 1, 10),
 ];
 
 var YOUR_HAND = new Array();
@@ -106,73 +106,73 @@ var SCORE = 0;
 function startGame() {
 	addNumbersFromBag();
 	displayHand();
-	
+
 };
 
 
 
-function addNumbersFromBag(){
+function addNumbersFromBag() {
 	console.log("your hand has:" + YOUR_HAND.length);
-	for(i=YOUR_HAND.length; i < 7; i++){
+	for (i = YOUR_HAND.length; i < 7; i++) {
 		YOUR_HAND[i] = getAvailableLetter();
 	}
-	
+
 }
 
 
-function displayHand(){
+function displayHand() {
 	console.log("your hand has:" + YOUR_HAND.length);
 	for (i = 0; i < YOUR_HAND.length; i++) {
 
-		console.log("#letter-" + (i+1) +" set to " + YOUR_HAND[i].letter);
-		$( "#letter-" + (i+1)).addClass("letter-" + YOUR_HAND[i].letter);
-		$( "#points-" + (i+1)).addClass("points-" + YOUR_HAND[i].pointsWhenLettersUsed);
-		
-		
-		
-		
-		$( "#letter-" + (i+1)).html(YOUR_HAND[i].letter);
-		
-		$( "#points-" + (i+1)).html(YOUR_HAND[i].pointsWhenLettersUsed);
+		console.log("#letter-" + (i + 1) + " set to " + YOUR_HAND[i].letter);
+		$("#letter-" + (i + 1)).addClass("letter-" + YOUR_HAND[i].letter);
+		$("#points-" + (i + 1)).addClass("points-" + YOUR_HAND[i].pointsWhenLettersUsed);
+
+
+
+
+		$("#letter-" + (i + 1)).html(YOUR_HAND[i].letter);
+
+		$("#points-" + (i + 1)).html(YOUR_HAND[i].pointsWhenLettersUsed);
 	}
-	
+
 }
 
 
 
-function getAvailableLetter(){
+function getAvailableLetter() {
 	var randomIndex = Math.floor(Math.random() * BAG_OF_LETTERS.length);
 	var randomLetter = BAG_OF_LETTERS.splice(randomIndex, 1);
 	console.log(randomLetter[0]);
 	return randomLetter[0];
 }
 function isExit(wordarray, left, index) {
-	var key = wordarray[index];  
-	for (var i= left; i < index; i++) {
+	var key = wordarray[index];
+	for (var i = left; i < index; i++) {
 		if (key == wordarray[i]) {
-			return true;  
-		}  
-	}  
-	return false;  
-}  
+			return true;
+		}
+	}
+	return false;
+}
 function Swap(wordarray, i, j) {
 	var temp = wordarray[i];
 	wordarray[i] = wordarray[j];
 	wordarray[j] = temp;
 }
 
-var maxScore=-1;
+var maxScore = -1;
 var word = "";
 
 function CheckTheWordWhenHasUnderline(wordarray, string, num) {
 	if (num == 1) {
-		for (var i = 0; i < string.length; i++){
+		for (var i = 0; i < string.length; i++) {
 			if (string[i] == '_') {
 				//console.log(string);
-				for (var ii = 0; ii < 26; ii++){
+				for (var ii = 0; ii < 26; ii++) {
 					string = string.split('');
-					string.splice(i, 1, String.fromCharCode(65+ii));
-					string=string.join('');
+					string.splice(i, 1, String.fromCharCode(65 + ii));
+					string = string.join('');
 					//console.log(string);
 					CheckTheWord(wordarray, string);
 				}
@@ -180,20 +180,20 @@ function CheckTheWordWhenHasUnderline(wordarray, string, num) {
 		}
 	}
 	else {
-		for (var i = 0; i < string.length; i++){
+		for (var i = 0; i < string.length; i++) {
 			if (string[i] == '_') {
-				for (var ii = 0; ii < 26; ii++){
+				for (var ii = 0; ii < 26; ii++) {
 					string[i] = 'a' + ii;
-					CheckTheWordWhenHasUnderline(wordarray, string, num-1);
+					CheckTheWordWhenHasUnderline(wordarray, string, num - 1);
 				}
 			}
 		}
 	}
 }
-function CheckTheWord(wordarray,string) {
+function CheckTheWord(wordarray, string) {
 	if (isThisAWord(string)) {
 		var s = 0;
-		for (var i = 0; i < wordarray.length; i++){
+		for (var i = 0; i < wordarray.length; i++) {
 			s += wordarray[i].pointsWhenLettersUsed;
 		}
 		if (s > maxScore) {
@@ -206,14 +206,14 @@ function AllArrange(wordarray, left, right) {
 	if (left == right) {
 		var string = "";
 		var num = 0;
-		for (var i = 0; i < wordarray.length; i++){
+		for (var i = 0; i < wordarray.length; i++) {
 			string += wordarray[i].letter;
 			if (wordarray[i].letter == '_') {
 				num++;
 			}
 		}
 		if (num > 0) {
-			CheckTheWordWhenHasUnderline(wordarray,string, num);
+			CheckTheWordWhenHasUnderline(wordarray, string, num);
 			return;
 		}
 		CheckTheWord(wordarray, string);
@@ -223,13 +223,13 @@ function AllArrange(wordarray, left, right) {
 			if (!isExit(wordarray, left, i)) {
 				Swap(wordarray, left, i);
 				AllArrange(wordarray, left + 1, right);
-				
+
 				if (right >= 1 && left == 0) {
 					var arraystring = JSON.stringify(wordarray);
 					var newwordarray = JSON.parse(arraystring);
 					newwordarray.shift();
 					//console.log(right);
-					AllArrange(newwordarray, 0, right-1);
+					AllArrange(newwordarray, 0, right - 1);
 				}
 
 				Swap(wordarray, left, i);
@@ -238,79 +238,79 @@ function AllArrange(wordarray, left, right) {
 		}
 	}
 }
-function findWordToUse(){
- //TODO Your job starts here.
+function findWordToUse() {
+	//TODO Your job starts here.
 	//alert("Your code needs to go here");
 	var string = JSON.stringify(YOUR_HAND);
 	var wordarray = JSON.parse(string);
 
 	AllArrange(wordarray, 0, wordarray.length - 1);
-	
+
 	if (maxScore > -1) {
 		console.log("max=" + word);
 		if (haveLettersForWord(word)) {
 			successfullyAddedWord(word);
 		}
 		else {
-			alert("It is a bug!");
+			alert("It is a bug!");//for test
 		}
 	}
 	else {
 		alert("Maybe there is no words!");
 		retireHand();
 	}
-	maxScore=-1;
+	maxScore = -1;
 	word = "";
 }
-function humanFindWordToUse(){
-	
-	 var humanFoundWord = $( "#human-word-input").val();
-	 console.log("Checking human workd of:" + humanFoundWord);
-	 if(isThisAWord(humanFoundWord)){
-		 if(haveLettersForWord(humanFoundWord)){
-			 successfullyAddedWord(humanFoundWord);
-		 }else{
-			 alert(humanFoundWord + " - Do not have the letters for this word");
-		 }
-	 }else{
-		 alert(humanFoundWord + " is not a valid word.");
-	 }
-		
+function humanFindWordToUse() {
+
+	var humanFoundWord = $("#human-word-input").val();
+	console.log("Checking human workd of:" + humanFoundWord);
+	if (isThisAWord(humanFoundWord)) {
+		if (haveLettersForWord(humanFoundWord)) {
+			successfullyAddedWord(humanFoundWord);
+		} else {
+			alert(humanFoundWord + " - Do not have the letters for this word");
+		}
+	} else {
+		alert(humanFoundWord + " is not a valid word.");
+	}
+
 }
 
 
-function successfullyAddedWord(foundWord){
-	$( "#word-history-list").append("<li>" + foundWord + "</li>");
+function successfullyAddedWord(foundWord) {
+	$("#word-history-list").append("<li>" + foundWord + "</li>");
 	clearClasses();
 	takeOutUsedLetters();
 	addNumbersFromBag();
 	displayHand();
-	$( "#human-word-input").val('');
-	
+	$("#human-word-input").val('');
+
 }
 
-function addToScore(letterToAddToScore){
+function addToScore(letterToAddToScore) {
 	SCORE = SCORE + letterToAddToScore.pointsWhenLettersUsed;
 	console.log(letterToAddToScore.pointsWhenLettersUsed + "<-Points added for " + letterToAddToScore.letter);
-	$( "#score-number").html(SCORE);
+	$("#score-number").html(SCORE);
 }
 
 
-function takeOutUsedLetters(){
-	
-	for(ii=0; ii < YOUR_HAND.length; ii++){
-		if(YOUR_HAND[ii].used){
+function takeOutUsedLetters() {
+
+	for (ii = 0; ii < YOUR_HAND.length; ii++) {
+		if (YOUR_HAND[ii].used) {
 			addToScore(YOUR_HAND[ii]);
 			YOUR_HAND.splice(ii, 1);
-			ii = ii-1;
-		}else{
+			ii = ii - 1;
+		} else {
 			console.log(YOUR_HAND[ii].letter + "<- Not Used");
 		}
 	}
-	
+
 }
 
-function haveLettersForWord(aProposedWord){
+function haveLettersForWord(aProposedWord) {
 	//You could code the _ logic could go in this function
 	var wordAsArray = aProposedWord.toUpperCase().split("");
 	for (i = 0; i < wordAsArray.length; i++) {
@@ -319,13 +319,13 @@ function haveLettersForWord(aProposedWord){
 
 		var COULD_USE_UNDERLINE_LOCATION = -1;
 
-		for(ii=0; ii<YOUR_HAND.length; ii++){
+		for (ii = 0; ii < YOUR_HAND.length; ii++) {
 			console.log("              " + YOUR_HAND[ii].letter + "<-Checking");
-			if (YOUR_HAND[ii].letter == '_' && !YOUR_HAND[ii].used){// find the _ 
+			if (YOUR_HAND[ii].letter == '_' && !YOUR_HAND[ii].used) {// find the _ 
 				COULD_USE_UNDERLINE_LOCATION = ii;
 			}
-			if(YOUR_HAND[ii].letter == wordAsArray [i]){
-				if(!YOUR_HAND[ii].used && !foundLetter){
+			if (YOUR_HAND[ii].letter == wordAsArray[i]) {
+				if (!YOUR_HAND[ii].used && !foundLetter) {
 					console.log("     " + YOUR_HAND[ii].letter + "<-Found");
 					YOUR_HAND[ii].used = true;
 					foundLetter = true;
@@ -333,67 +333,67 @@ function haveLettersForWord(aProposedWord){
 				}
 			}
 		}
-		
+
 		if (!foundLetter && COULD_USE_UNDERLINE_LOCATION > -1) {
-			if (!YOUR_HAND[COULD_USE_UNDERLINE_LOCATION].used){
-				console.log("     " + wordAsArray [i] + "<-Found by _");
+			if (!YOUR_HAND[COULD_USE_UNDERLINE_LOCATION].used) {
+				console.log("     " + wordAsArray[i] + "<-Found by _");
 				YOUR_HAND[COULD_USE_UNDERLINE_LOCATION].used = true;
 				foundLetter = true;
 			}
 		}
 
-		
-		if(!foundLetter){
+
+		if (!foundLetter) {
 			resetHand();
 			return false;
 		}
 	}
-	
+
 	return true;
 }
 
 
-function resetHand(){
-	
-	for(ii=0; ii<YOUR_HAND.length; ii++){
+function resetHand() {
+
+	for (ii = 0; ii < YOUR_HAND.length; ii++) {
 		YOUR_HAND[i].used = false;
 	}
 }
 
-function isThisAWord(aProposedWord){
-	  if (Word_List.isInList(aProposedWord)) {
-	      return true;
-	  }
-	  return false;
+function isThisAWord(aProposedWord) {
+	if (Word_List.isInList(aProposedWord)) {
+		return true;
+	}
+	return false;
 }
 
-function retireHand(){
+function retireHand() {
 	//Loose all the points in your hand
 	clearClasses();
 	YOUR_HAND = new Array();
 	addNumbersFromBag();
 	displayHand();
 }
-function clearClasses(){
-	for(ii=0; ii < YOUR_HAND.length; ii++){
-		$("#letter-" + (ii+1)).removeClass("letter-" + YOUR_HAND[ii].letter);
-		$("#points-" + (ii+1)).removeClass("points-" + YOUR_HAND[ii].pointsWhenLettersUsed);
+function clearClasses() {
+	for (ii = 0; ii < YOUR_HAND.length; ii++) {
+		$("#letter-" + (ii + 1)).removeClass("letter-" + YOUR_HAND[ii].letter);
+		$("#points-" + (ii + 1)).removeClass("points-" + YOUR_HAND[ii].pointsWhenLettersUsed);
 	}
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 	startGame();
-	
-	$("#find-word-button").click(function() {
+
+	$("#find-word-button").click(function () {
 		findWordToUse();
 	});
-	$("#human-find-word-button").click(function() {
+	$("#human-find-word-button").click(function () {
 		humanFindWordToUse();
 	});
-	$("#retire-hand-button").click(function() {
+	$("#retire-hand-button").click(function () {
 		retireHand();
 	});
-	$('#human-word-input').keypress(function(event) {
+	$('#human-word-input').keypress(function (event) {
 		if (event.which == 13) {
 			humanFindWordToUse();
 		}

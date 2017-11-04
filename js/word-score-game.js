@@ -146,11 +146,48 @@ function getAvailableLetter(){
 	console.log(randomLetter[0]);
 	return randomLetter[0];
 }
-
-
+function isExit(wordarray, left, index) {
+	var key = wordarray[index];  
+	for (var i= left; i < index; i++) {
+		if (key == wordarray[i]) {
+			return true;  
+		}  
+	}  
+	return false;  
+}  
+function Swap(wordarray, i, j) {
+	var temp = wordarray[i];
+	wordarray[i] = wordarray[j];
+	wordarray[j] = temp;
+}
+var deep = 0;
+var loop = 0;
+var loopend = 0;
+function AllArrange(wordarray, left, right) {
+	if (left == right) {
+		var string = "";
+		for (var i = 0; i < wordarray.length; i++){
+			string += wordarray[i].letter;
+		}
+		console.log("排列："+string);
+	}
+	else {
+		for (var i = left; i <= right; i++) {
+			if (!isExit(wordarray, left, i)) {
+				Swap(wordarray, left, i);
+				AllArrange(wordarray, left+1, right);
+				Swap(wordarray, left, i);
+			}
+		}  
+	}
+}
 function findWordToUse(){
  //TODO Your job starts here.
-	alert("Your code needs to go here");	
+	//alert("Your code needs to go here");
+	var string = JSON.stringify(YOUR_HAND);
+	var wordarray = JSON.parse(string);
+	AllArrange(wordarray, 0, wordarray.length-1);
+
 }
 function humanFindWordToUse(){
 	
@@ -206,18 +243,32 @@ function haveLettersForWord(aProposedWord){
 	for (i = 0; i < wordAsArray.length; i++) {
 		var foundLetter = false;
 		console.log(wordAsArray[i] + "<-For match");
+
+		var COULD_USE_UNDERLINE_LOCATION = -1;
+
 		for(ii=0; ii<YOUR_HAND.length; ii++){
 			console.log("              " + YOUR_HAND[ii].letter + "<-Checking");
+			if (YOUR_HAND[ii].letter == '_' && !YOUR_HAND[ii].used){// find the _ 
+				COULD_USE_UNDERLINE_LOCATION = ii;
+			}
 			if(YOUR_HAND[ii].letter == wordAsArray [i]){
 				if(!YOUR_HAND[ii].used && !foundLetter){
 					console.log("     " + YOUR_HAND[ii].letter + "<-Found");
 					YOUR_HAND[ii].used = true;
 					foundLetter = true;
-					
+					break; //add for avoiding useless loop
 				}
 			}
 		}
 		
+		if (!foundLetter && COULD_USE_UNDERLINE_LOCATION > -1) {
+			if (!YOUR_HAND[COULD_USE_UNDERLINE_LOCATION].used){
+				console.log("     " + wordAsArray [i] + "<-Found by _");
+				YOUR_HAND[COULD_USE_UNDERLINE_LOCATION].used = true;
+				foundLetter = true;
+			}
+		}
+
 		
 		if(!foundLetter){
 			resetHand();
